@@ -1,0 +1,3 @@
+PROFILE=skunk
+REGION=us-east-1
+ENDPOINT_TYPE=lambda

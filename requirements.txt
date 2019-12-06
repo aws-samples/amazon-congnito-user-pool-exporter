@@ -1,0 +1,7 @@
+boto3
+boto
+argparse
+mock
+amazon-kclpy
+pyyaml
+boolean.py
