@@ -1,7 +1,4 @@
 boto3
 boto
+botocore
 argparse
-mock
-amazon-kclpy
-pyyaml
-boolean.py
