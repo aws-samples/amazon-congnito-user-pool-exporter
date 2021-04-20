@@ -1,14 +1,14 @@
-# Cognito Export
+# Pooltool.py: Cognito User Pool Exporter
 
-This script will export the cognito user pool to a CSV file.  The CSV file can then be used to import the user pool to another instance of Congito.
+This script that leverages the AWS Boto API to export a cognito user pool to a CSV file.  The CSV file can then be used to re-hydrate another Cognito user pool with users.
 
 # Requirements
 
 ## Python
-This CLI is built with Python 3.7.  Install Python on your machine and install pip to get started
+This CLI is built with Python 3.7.  Install Python on your machine and install pip to get started.
 
 ## PIP Requirements
-The requirements.txt file can be used to setup your Python environment via pip.  Simply call pip install -r requirements.txt to install the pip requirements
+The requirements.txt file can be used to setup your Python environment via pip.  Simply call pip install -r requirements.txt to install the required modules.
 
 ## Install AWS CLI
 To use this script, you'll need to install the AWS CLI on your machine.  Detailed instructions can be found here: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
@@ -18,8 +18,10 @@ You'll need to create an AWS credentials file with a profile entry for the accou
 
 Detailed information can be found here: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
 
-## Modify the settings.txt file located in src
-You'll need to modify the settings.txt file located in the src folder to align with the profile you created in the previous step and the region in which the Cognito user pool that you want to export is located
+## [Optional] Modify the settings.txt file located in src
+If you do not wish to provide profile and region information as arguments to the Pooltool, you can save them to a settings.txt file.
+
+Modify the settings.txt file located in the src folder to align with the profile you created in the previous step and the region in which the Cognito user pool that you want to export is located.
 
 # Usage
 For up-to-date inline help documentation type the following:
