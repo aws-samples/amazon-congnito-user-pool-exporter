@@ -27,6 +27,7 @@ dispatcher-src.zip
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+__pycache__
 
 # Directories potentially created on remote AFP share
 .AppleDB
