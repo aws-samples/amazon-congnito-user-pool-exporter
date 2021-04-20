@@ -2,6 +2,12 @@
 
 This script that leverages the AWS Boto API to export a cognito user pool to a CSV file.  The CSV file can then be used to re-hydrate another Cognito user pool with users.
 
+## What do I do with a user pool csv file?
+
+You can use this csv file as a way to backup your user pool and restore it into recovered user pool or into a user pool in another account or region.
+
+Details on how to import users from a csv to a user pool can be found in the AWS developer guide under [Cognito User Pools Using Import Tool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-using-import-tool.html)
+
 # Requirements
 
 ## Python
