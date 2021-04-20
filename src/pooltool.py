@@ -109,7 +109,10 @@ def main():
     args = parser.parse_args()
 
     if args.command == 'export':
-        export_file(args)
+        if 'file' in args:
+          export_file(args)
+        else:
+          parser_export_user_pool.print_help()
 
 
 
