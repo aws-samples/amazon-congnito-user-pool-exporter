@@ -52,22 +52,22 @@ def write_to_file(filename, format, pool_data):
     users = pool_data['Users']
     csv_headers = pool_data['CSVHeaders']
     header_string = ','.join(csv_headers)
-    outfile = open(filename, 'w')
-    outfile.write(header_string+"\n")
-    for user in users:
-        user_string = None
-        attributes = user['Attributes']
-        for header in csv_headers:
-            value = next((item['Value'] for item in attributes if item["Name"] == header), '')
-            if header == 'cognito:username':
-                value = user['Username']
-            if (header.lower().endswith('enabled') or header.lower().endswith('verified')) and value == '':
-                value = 'false'
-            if user_string is None:
-                user_string = value
-            else:
-                user_string = user_string+","+value
-        outfile.write(user_string+"\n")
+    with open(filename, 'w') as outfile:
+        outfile.write(header_string+"\n")
+        for user in users:
+            user_string = None
+            attributes = user['Attributes']
+            for header in csv_headers:
+                value = next((item['Value'] for item in attributes if item["Name"] == header), '')
+                if header == 'cognito:username':
+                    value = user['Username']
+                if (header.lower().endswith('enabled') or header.lower().endswith('verified')) and value == '':
+                    value = 'false'
+                if user_string is None:
+                    user_string = value
+                else:
+                    user_string = user_string+","+value
+            outfile.write(user_string+"\n")
     return
 
 def read_setting_line(line):
